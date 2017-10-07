@@ -47,7 +47,7 @@ namespace Com.MyCompany.MyGame
                 /// </summary>
         void Awake()
         {
-
+            DontDestroyOnLoad(this);
 
             // #Critical
             // we don't join the lobby. There is no need to join a lobby to get the list of rooms.
@@ -141,8 +141,15 @@ namespace Com.MyCompany.MyGame
             PhotonNetwork.CreateRoom(null, new RoomOptions() { MaxPlayers = MaxPlayersPerRoom}, null);
         }
 
+        public override void OnPhotonPlayerConnected(PhotonPlayer newPlayer)
+        {
+            Debug.LogWarning("There are : " + PhotonNetwork.room.playerCount + " players");
+            base.OnPhotonPlayerConnected(newPlayer);
+        }
+
         public override void OnJoinedRoom()
         {
+            Debug.LogWarning("There are : " + PhotonNetwork.room.playerCount + " players");
             Debug.Log("DemoAnimator/Launcher: OnJoinedRoom() called by PUN. Now this client is in a room.");
             // #Critical: We only load if we are the first player, else we rely on  PhotonNetwork.automaticallySyncScene to sync our instance scene.
             if (PhotonNetwork.room.PlayerCount == 1)
