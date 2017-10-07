@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2017
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "myplayarground", "myplayarground.csproj", "{91BCE744-7FC3-5B48-A652-C3C7334C6E82}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "myplayarground.Plugins", "myplayarground.Plugins.csproj", "{FA095B76-915B-2E28-F172-F20AEDB2386D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "myplayarground.Editor", "myplayarground.Editor.csproj", "{EE04D3BB-1C29-DCE2-F84D-30A225158956}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{91BCE744-7FC3-5B48-A652-C3C7334C6E82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91BCE744-7FC3-5B48-A652-C3C7334C6E82}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91BCE744-7FC3-5B48-A652-C3C7334C6E82}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91BCE744-7FC3-5B48-A652-C3C7334C6E82}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA095B76-915B-2E28-F172-F20AEDB2386D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA095B76-915B-2E28-F172-F20AEDB2386D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA095B76-915B-2E28-F172-F20AEDB2386D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA095B76-915B-2E28-F172-F20AEDB2386D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE04D3BB-1C29-DCE2-F84D-30A225158956}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE04D3BB-1C29-DCE2-F84D-30A225158956}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE04D3BB-1C29-DCE2-F84D-30A225158956}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE04D3BB-1C29-DCE2-F84D-30A225158956}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
