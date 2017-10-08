@@ -1,0 +1,4 @@
+sceneSetups:
+- path: Assets/PlayWorld/Scenes/HoldAndMove.unity
+  isLoaded: 1
+  isActive: 1
