@@ -288,12 +288,17 @@
     <Compile Include="Assets\GoogleARCore\SDK\Scripts\Utility\MarshalingHelper.cs" />
     <Compile Include="Assets\GoogleARCore\SDK\Scripts\Utility\ProvidedSingleton.cs" />
     <Compile Include="Assets\GoogleARCore\SDK\Scripts\Utility\SingletonComponentProvider.cs" />
+    <Compile Include="Assets\testTiles\ColliderLogic\PlayerCollider.cs" />
+    <Compile Include="Assets\testTiles\ColliderLogic\TileGameManager.cs" />
+    <Compile Include="Assets\testTiles\Tiles\TileScripts\AnswerTile.cs" />
+    <Compile Include="Assets\testTiles\Tiles\TileScripts\WalkerCollider.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\GoogleARCore\HelloARExample\Materials\Shaders\MobileDiffuseWithLightEstimation.shader" />
     <None Include="Assets\GoogleARCore\HelloARExample\Materials\Shaders\MobileSpecularWithLightEstimation.shader" />
     <None Include="Assets\GoogleARCore\HelloARExample\Materials\Shaders\PlaneGrid.shader" />
     <None Include="Assets\GoogleARCore\HelloARExample\Materials\Shaders\PointCloud.shader" />
+    <None Include="Assets\PlayWorld\Model\Hole\Mask.shader" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

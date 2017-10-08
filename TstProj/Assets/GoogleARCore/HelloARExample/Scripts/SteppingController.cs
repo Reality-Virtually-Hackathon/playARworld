@@ -51,6 +51,8 @@ namespace GoogleARCore.HelloAR
         /// </summary>
         public GameObject m_searchingForPlaneUI;
 
+        private GameObject m_colorPanel;
+
         private List<TrackedPlane> m_newPlanes = new List<TrackedPlane>();
 
         private List<TrackedPlane> m_allPlanes = new List<TrackedPlane>();
@@ -105,7 +107,11 @@ namespace GoogleARCore.HelloAR
                 planeObject.GetComponent<Renderer>().material.SetColor("_GridColor", m_planeColors[Random.Range(0,
                     m_planeColors.Length - 1)]);
                 planeObject.GetComponent<Renderer>().material.SetFloat("_UvRotation", Random.Range(0.0f, 360.0f));
-            }
+
+                // collider
+                if (planeObject.transform.position.y < PlayerCollider.floorHeight)
+                    PlayerCollider.floorHeight = planeObject.transform.position.y - 2.0f; 
+             }
 
             // Disable the snackbar UI when no planes are valid.
             bool showSearchingUI = true;
@@ -120,6 +126,24 @@ namespace GoogleARCore.HelloAR
             }
 
             m_searchingForPlaneUI.SetActive(showSearchingUI);
+
+            if (showSearchingUI && GameObject.Find("longPanel") != null)
+            {
+                // finds largest new plane
+                int maxIdx = 0;
+                float maxVal = 0f; 
+                for(int i=0; i<m_newPlanes.Count; i++)
+                {
+                    if (maxVal < m_newPlanes[i].Bounds.x*m_newPlanes[i].Bounds.y)
+                    {
+                        maxIdx = i;
+                        maxVal = m_newPlanes[i].Bounds.x * m_newPlanes[i].Bounds.y; 
+                    }
+                }
+                var largestNewPlane = m_newPlanes[maxIdx]; 
+                
+
+            }
 
 
             Vector3 qPanelPos = new Vector3(0, 10, 150);
@@ -152,8 +176,7 @@ namespace GoogleARCore.HelloAR
 
             if (Session.Raycast(m_firstPersonCamera.ScreenPointToRay(touch.position), raycastFilter, out hit))
             {
-
-                if (GameObject.Find("longPanel") == null)
+                if (m_colorPanel == null)
                 {
                     // place the long panel
 
@@ -161,12 +184,11 @@ namespace GoogleARCore.HelloAR
                     // world evolves.
                     var anchor_two = Session.CreateAnchor(hit.Point, Quaternion.identity);
 
-                    var floorObject = Instantiate(m_longPanelPrefab, hit.Point, Quaternion.identity, anchor_two.transform);
+                    m_colorPanel = Instantiate(m_longPanelPrefab, hit.Point, Quaternion.identity, anchor_two.transform);
 
                     // Use a plane attachment component to maintain Andy's y-offset from the plane
                     // (occurs after anchor updates).
-                    floorObject.GetComponent<PlaneAttachment>().Attach(hit.Plane);
-                    floorObject.name = "longPanel";
+                    m_colorPanel.GetComponent<PlaneAttachment>().Attach(hit.Plane);
 
                 }
 

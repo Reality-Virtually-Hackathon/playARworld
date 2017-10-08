@@ -2,16 +2,32 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlaneCount : MonoBehaviour {
+namespace GoogleARCore.HelloAR
+{
+    using System.Collections.Generic;
+    using UnityEngine;
+    using UnityEngine.Rendering;
+    using GoogleARCore;
 
-    public void OnGUI()
+    public class PlaneCount : MonoBehaviour
     {
-        int count = 0;
+        private List<TrackedPlane> m_allPlanes = new List<TrackedPlane>();
 
-        if (GUI.Button(new Rect(90, 210, 600, 300), new GUIContent("count"))) {
-            var planes = Object.FindObjectsOfType(typeof(GoogleARCore.TrackedPlane));
-            count = planes.Length;
+
+        public void Update()
+        {
+            int count = 0;
+
+            Frame.GetAllPlanes(ref m_allPlanes);
+            for (int i = 0; i < m_allPlanes.Count; i++)
+            {
+                if (m_allPlanes[i].IsValid)
+                {
+                    count++;
+                }
+            }
+            GUI.Label(new Rect(90, 510, 600, 300), new GUIContent(count.ToString()));
         }
-        
+
     }
 }
