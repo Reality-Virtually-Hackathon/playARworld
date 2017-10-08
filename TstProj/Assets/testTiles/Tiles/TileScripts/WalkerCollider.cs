@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class WalkerCollider : MonoBehaviour {
 
+    public static float wCollider; 
+
 	//private float timeHit = 0;
 
 	public void Start (){
@@ -20,7 +22,7 @@ public class WalkerCollider : MonoBehaviour {
 
 	}
 
-	public void OnTriggerEnter(Collider col){
+	public void OnTriggerStay(Collider col){
 		if (col.gameObject.layer == TileGameManager.playerLayer) {
 
 			string sentence = "Hit " + transform.parent.name;

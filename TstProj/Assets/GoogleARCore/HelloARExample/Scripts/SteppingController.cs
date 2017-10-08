@@ -51,7 +51,10 @@ namespace GoogleARCore.HelloAR
         /// </summary>
         public GameObject m_searchingForPlaneUI;
 
+        private Anchor anchor_color;
+        private TrackableHit firstHit; 
         private GameObject m_colorPanel;
+        private List<GameObject> m_colorPanelsList = new List<GameObject>(); 
 
         private List<TrackedPlane> m_newPlanes = new List<TrackedPlane>();
 
@@ -127,21 +130,29 @@ namespace GoogleARCore.HelloAR
 
             m_searchingForPlaneUI.SetActive(showSearchingUI);
 
-            if (showSearchingUI && GameObject.Find("longPanel") != null)
+            if (false && m_colorPanel != null)
             {
+                Vector3 newPanelPos = firstHit.Point + new Vector3(0, 0, 5f * m_colorPanelsList.Count); 
+
+                // adds a new panel 
+                var cur_panel = Instantiate(m_longPanelPrefab, newPanelPos, Quaternion.identity, anchor_color.transform);
+                cur_panel.GetComponent<PlaneAttachment>().Attach(firstHit.Plane);
+                cur_panel.name = "colorPanelk";
+                m_colorPanelsList.Add(cur_panel);
+
+
                 // finds largest new plane
-                int maxIdx = 0;
-                float maxVal = 0f; 
-                for(int i=0; i<m_newPlanes.Count; i++)
-                {
-                    if (maxVal < m_newPlanes[i].Bounds.x*m_newPlanes[i].Bounds.y)
-                    {
-                        maxIdx = i;
-                        maxVal = m_newPlanes[i].Bounds.x * m_newPlanes[i].Bounds.y; 
-                    }
-                }
-                var largestNewPlane = m_newPlanes[maxIdx]; 
-                
+                //int maxIdx = 0;
+                //float maxVal = 0f; 
+                //for(int i=0; i<m_newPlanes.Count; i++)
+                //{
+                //    if (maxVal < m_newPlanes[i].Bounds.x*m_newPlanes[i].Bounds.y)
+                //    {
+                //        maxIdx = i;
+                //        maxVal = m_newPlanes[i].Bounds.x * m_newPlanes[i].Bounds.y; 
+                //    }
+                //}
+                //var largestNewPlane = m_newPlanes[maxIdx]; 
 
             }
 
@@ -182,13 +193,17 @@ namespace GoogleARCore.HelloAR
 
                     // Create an anchor to allow ARCore to track the hitpoint as understanding of the physical
                     // world evolves.
-                    var anchor_two = Session.CreateAnchor(hit.Point, Quaternion.identity);
-
-                    m_colorPanel = Instantiate(m_longPanelPrefab, hit.Point, Quaternion.identity, anchor_two.transform);
+                    anchor_color = Session.CreateAnchor(hit.Point, Quaternion.identity);
+                    firstHit = hit; 
+                    m_colorPanel = Instantiate(m_longPanelPrefab, hit.Point, Quaternion.identity, anchor_color.transform);
 
                     // Use a plane attachment component to maintain Andy's y-offset from the plane
                     // (occurs after anchor updates).
                     m_colorPanel.GetComponent<PlaneAttachment>().Attach(hit.Plane);
+                    m_colorPanel.name = "colorPanel";
+                    m_colorPanelsList.Add(m_colorPanel);
+
+                    
 
                 }
 
