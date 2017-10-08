@@ -302,7 +302,7 @@ MonoBehaviour:
     type: 2}
   m_questionPanelPrefab: {fileID: 1356857834515228, guid: 0c2e51d5c4c20de48a465e1c363c09c6,
     type: 2}
-  m_longPanelPrefab: {fileID: 1340376114472910, guid: 7b7f8203221eb0a42b510d4d9ec7b813,
+  m_longPanelPrefab: {fileID: 1044923994846090, guid: 19052cb0462609642a8ec5768e989147,
     type: 2}
   m_searchingForPlaneUI: {fileID: 1133631540}
 --- !u!1001 &719998652

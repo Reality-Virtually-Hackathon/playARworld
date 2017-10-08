@@ -21,13 +21,14 @@ public class WalkerCollider : MonoBehaviour {
 		rigBod.isKinematic = true;
 
 	}
-
-	public void OnTriggerStay(Collider col){
-		if (col.gameObject.layer == TileGameManager.playerLayer) {
+    
+    public void OnTriggerEnter(Collider col)
+    {
+            if (col.gameObject.layer == TileGameManager.playerLayer) {
 
 			string sentence = "Hit " + transform.parent.name;
 			print (sentence);
 			TileGameManager.printString = sentence;
-		}
+	    	}
 	}
 }

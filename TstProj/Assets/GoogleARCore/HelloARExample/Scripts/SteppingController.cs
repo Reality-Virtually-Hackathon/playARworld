@@ -202,9 +202,6 @@ namespace GoogleARCore.HelloAR
                     m_colorPanel.GetComponent<PlaneAttachment>().Attach(hit.Plane);
                     m_colorPanel.name = "colorPanel";
                     m_colorPanelsList.Add(m_colorPanel);
-
-                    
-
                 }
 
             }
