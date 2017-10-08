@@ -60,3 +60,20 @@ C:/Program Files/Unity 2017.3.0b3/Editor/Data/UnityExtensions/Unity/UnitySpatial
 C:/Users/hayounoh/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.ads@0.0.17/UnityEngine.Advertisements.dll
 C:/Users/hayounoh/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.analytics@0.0.19/UnityEngine.Analytics.dll
 C:/Users/hayounoh/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.purchasing@0.0.19/UnityEngine.Purchasing.dll
+C:/Program Files/Unity 2017.3.0b3/Editor/Data/UnityExtensions/Unity/GUISystem/Editor/UnityEditor.UI.dll
+C:/Program Files/Unity 2017.3.0b3/Editor/Data/UnityExtensions/Unity/Networking/Editor/UnityEditor.Networking.dll
+C:/Program Files/Unity 2017.3.0b3/Editor/Data/UnityExtensions/Unity/TestRunner/Editor/UnityEditor.TestRunner.dll
+C:/Program Files/Unity 2017.3.0b3/Editor/Data/UnityExtensions/Unity/Timeline/Editor/UnityEditor.Timeline.dll
+C:/Program Files/Unity 2017.3.0b3/Editor/Data/UnityExtensions/Unity/TreeEditor/Editor/UnityEditor.TreeEditor.dll
+C:/Program Files/Unity 2017.3.0b3/Editor/Data/UnityExtensions/Unity/UIAutomation/Editor/UnityEditor.UIAutomation.dll
+C:/Program Files/Unity 2017.3.0b3/Editor/Data/UnityExtensions/Unity/UnityGoogleAudioSpatializer/Editor/UnityEditor.GoogleAudioSpatializer.dll
+C:/Program Files/Unity 2017.3.0b3/Editor/Data/UnityExtensions/Unity/UnityHoloLens/Editor/UnityEditor.HoloLens.dll
+C:/Program Files/Unity 2017.3.0b3/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/Editor/UnityEditor.SpatialTracking.dll
+C:/Program Files/Unity 2017.3.0b3/Editor/Data/UnityExtensions/Unity/UnityVR/Editor/UnityEditor.VR.dll
+C:/Program Files/Unity 2017.3.0b3/Editor/Data/Managed/UnityEditor.Graphs.dll
+C:/Program Files/Unity 2017.3.0b3/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
+C:/Program Files/Unity 2017.3.0b3/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll
+C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/15.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll
+C:/Users/hayounoh/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.ads@0.0.17/Editor/UnityEditor.Advertisements.dll
+C:/Users/hayounoh/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.analytics@0.0.19/Editor/UnityEditor.Analytics.dll
+C:/Users/hayounoh/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.purchasing@0.0.19/Editor/UnityEditor.Purchasing.dll

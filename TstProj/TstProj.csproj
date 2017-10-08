@@ -234,6 +234,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\CountDown.cs" />
+    <Compile Include="Assets\GameTurnManager.cs" />
     <Compile Include="Assets\GoogleARCore\HelloARExample\Scripts\HelloARController.cs" />
     <Compile Include="Assets\GoogleARCore\HelloARExample\Scripts\PlaneAttachment.cs" />
     <Compile Include="Assets\GoogleARCore\HelloARExample\Scripts\PlaneCount.cs" />
@@ -288,10 +290,14 @@
     <Compile Include="Assets\GoogleARCore\SDK\Scripts\Utility\MarshalingHelper.cs" />
     <Compile Include="Assets\GoogleARCore\SDK\Scripts\Utility\ProvidedSingleton.cs" />
     <Compile Include="Assets\GoogleARCore\SDK\Scripts\Utility\SingletonComponentProvider.cs" />
+    <Compile Include="Assets\QuestionManager.cs" />
+    <Compile Include="Assets\QuestionPool.cs" />
+    <Compile Include="Assets\Questions\Question.cs" />
     <Compile Include="Assets\testTiles\ColliderLogic\PlayerCollider.cs" />
     <Compile Include="Assets\testTiles\ColliderLogic\TileGameManager.cs" />
     <Compile Include="Assets\testTiles\Tiles\TileScripts\AnswerTile.cs" />
     <Compile Include="Assets\testTiles\Tiles\TileScripts\WalkerCollider.cs" />
+    <Compile Include="Assets\Tile.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\GoogleARCore\HelloARExample\Materials\Shaders\MobileDiffuseWithLightEstimation.shader" />

@@ -45,6 +45,7 @@ namespace GoogleARCore.HelloAR
         /// </summary>
         public GameObject m_questionPanelPrefab;
         public GameObject m_longPanelPrefab;
+        public GameObject m_colorTilePrefab; 
 
         /// <summary>
         /// A gameobject parenting UI for displaying the "searching for planes" snackbar.
@@ -135,7 +136,7 @@ namespace GoogleARCore.HelloAR
                 Vector3 newPanelPos = firstHit.Point + new Vector3(0, 0, 5f * m_colorPanelsList.Count); 
 
                 // adds a new panel 
-                var cur_panel = Instantiate(m_longPanelPrefab, newPanelPos, Quaternion.identity, anchor_color.transform);
+                var cur_panel = Instantiate(m_colorTilePrefab, newPanelPos, Quaternion.identity, anchor_color.transform);
                 cur_panel.GetComponent<PlaneAttachment>().Attach(firstHit.Plane);
                 cur_panel.name = "colorPanelk";
                 m_colorPanelsList.Add(cur_panel);
@@ -157,7 +158,7 @@ namespace GoogleARCore.HelloAR
             }
 
 
-            Vector3 qPanelPos = new Vector3(0, 10, 150);
+            Vector3 qPanelPos = new Vector3(0, 10, 40);
 
             // adjusts the position of the question panel
             var questionObject = GameObject.Find("qPanel");
@@ -168,7 +169,7 @@ namespace GoogleARCore.HelloAR
 
                 questionObject = Instantiate(m_questionPanelPrefab, qPanelPos, Quaternion.identity, anchor.transform);
                 questionObject.transform.LookAt(m_firstPersonCamera.transform);
-                questionObject.transform.rotation = Quaternion.Euler(0.0f,
+                questionObject.transform.rotation = Quaternion.Euler(270.0f,
                     questionObject.transform.rotation.eulerAngles.y, questionObject.transform.rotation.z);
                 questionObject.name = "qPanel";
             }
@@ -189,19 +190,25 @@ namespace GoogleARCore.HelloAR
             {
                 if (m_colorPanel == null)
                 {
-                    // place the long panel
 
+                    // place the color panel
                     // Create an anchor to allow ARCore to track the hitpoint as understanding of the physical
                     // world evolves.
                     anchor_color = Session.CreateAnchor(hit.Point, Quaternion.identity);
                     firstHit = hit; 
-                    m_colorPanel = Instantiate(m_longPanelPrefab, hit.Point, Quaternion.identity, anchor_color.transform);
+                    m_colorPanel = Instantiate(m_colorTilePrefab, hit.Point, Quaternion.identity, anchor_color.transform);
 
                     // Use a plane attachment component to maintain Andy's y-offset from the plane
                     // (occurs after anchor updates).
                     m_colorPanel.GetComponent<PlaneAttachment>().Attach(hit.Plane);
                     m_colorPanel.name = "colorPanel";
                     m_colorPanelsList.Add(m_colorPanel);
+
+                    // place the long panel
+                    var m_longPanel = Instantiate(m_longPanelPrefab, hit.Point, Quaternion.identity, anchor_color.transform);
+                    m_longPanel.GetComponent<PlaneAttachment>().Attach(hit.Plane);
+
+
                 }
 
             }

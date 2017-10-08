@@ -1,6 +1,6 @@
 Android
 SceneListBegin?
-Assets/PlayWorld/Scenes/HoldAndMove.unity
+Assets/GoogleARCore/HelloARExample/Scenes/HoldAndMove.unity
 SceneListEnd?
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
 970a95104359198fe1a98ef48655de8c UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationTrack
@@ -16,7 +16,7 @@ ff05dcdf90651c3d98a9cad3df5e471e UnityEngine.Timeline.dll:UnityEngine.Timeline.C
 9ca6347af5ceb6b0d1c105af31b6722e UnityEngine.Timeline.dll:UnityEngine.Timeline.TimelineAsset
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:GoogleARCore.Anchor
 655884266be5580639b03fa8b5a830a5 Assembly-CSharp.dll:GoogleARCore.SessionConfig
-b3e70f710701f33653b2ba0a9e2d7f43 Assembly-CSharp.dll:GoogleARCore.HelloAR.SteppingController
+fc5f8b3128aac4e0e90511f76fc8c47d Assembly-CSharp.dll:GoogleARCore.HelloAR.SteppingController
 a35dc9cca2faebc5f5f1aeb9e8e47bbe UnityEngine.UI.dll:UnityEngine.UI.AspectRatioFitter
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.UI.dll:UnityEngine.EventSystems.BaseInput
 49cd62a578efc0a599b810a2b66cd49c UnityEngine.UI.dll:UnityEngine.UI.Button
@@ -153,3 +153,9 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 9de3a22eca9aefadba2d10d5987cefe3 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:GoogleARCore.HelloAR.PlaneCount
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:GoogleARCore.HelloAR.TrackedPlaneVisualizer
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.CountDown
+4dff953035da1dde4994e708a7453f08 Assembly-CSharp.dll:.QuestionPool
+b7119845d4be882259ce5ba9f08d1272 Assembly-CSharp.dll:.Question
+ea15e32f2bf261aa58480da46155b3e1 Assembly-CSharp.dll:.GameTurnManager
+6dfb63cffe7d9bdc89a09bb3e2aa5cb8 Assembly-CSharp.dll:.QuestionManager
+0ecaadb61fa62fabc42208c9445df094 Assembly-CSharp.dll:.Tile

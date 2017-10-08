@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/PlayWorld/Scenes/HoldAndMove.unity
+- path: Assets/GoogleARCore/HelloARExample/Scenes/HoldAndMove.unity
   isLoaded: 1
   isActive: 1
