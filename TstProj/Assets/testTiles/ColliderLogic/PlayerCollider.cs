@@ -17,7 +17,6 @@ public class PlayerCollider : MonoBehaviour {
 		playerColGo = new GameObject ("PlayerCol");
         playerColGo.transform.localScale = new Vector3(0.2f, 15.2f, 0.2f); 
 		playerColGo.AddComponent<BoxCollider> ();
-        playerColGo.AddComponent<MeshRenderer>();
         //playerLayer = LayerMask.NameToLayer ("Player");
         playerColGo.layer = TileGameManager.playerLayer;
 	}
