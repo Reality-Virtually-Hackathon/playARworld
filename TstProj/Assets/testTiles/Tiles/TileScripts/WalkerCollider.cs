@@ -3,9 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class WalkerCollider : MonoBehaviour {
-
-    public static float wCollider; 
-
+    
 	//private float timeHit = 0;
 
 	public void Start (){
